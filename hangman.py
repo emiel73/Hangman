@@ -15,7 +15,8 @@ class Game:
         return self.hint == self.word
 
     def check_letter(self, letter):
-        if letter in set(self.word) and letter not in self.hint and len(letter) == 1 and letter in string.ascii_lowercase:
+        if letter in set(self.word) and letter not in self.hint \
+                and len(letter) == 1 and letter in string.ascii_lowercase:
             for index, char in enumerate(self.hint):
                 if self.word[index] == letter:
                     self.hint[index] = letter
